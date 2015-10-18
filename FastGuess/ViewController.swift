@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import MBProgressHUD
 
 class ViewController: UIViewController {
     var imgView:UIImageView?
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadPicture()
         Alamofire.request(.GET, "http://b.hiphotos.baidu.com/image/pic/item/f9198618367adab49ba3154489d4b31c8701e442.jpg")
         .responseJSON { (response) -> Void in
             print(response.data)
@@ -37,6 +39,30 @@ class ViewController: UIViewController {
     func reloadDataRefreshUI() {
         imgView!.image = UIImage.init(data: self.result!)
     }
+    
+    private func showProgressHUD() {
+    
+        let progressHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        progressHUD.labelText = "正在加载..."
+        
+    }
+    
+    private func hideProgressHUD() {
+        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+    }
+    
+    private func loadPicture() {
+        let urlString = "http://ww3.sinaimg.cn/bmiddle/e4bfd450jw1ex53f5h9aej20c80m3jsd.jpg"
+        showProgressHUD()
+        Alamofire.request(.GET, urlString)
+        .responseJSON { (response) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.hideProgressHUD()
+            })
+            
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
