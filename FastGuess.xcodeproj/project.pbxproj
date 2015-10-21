@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		24B66CF73D456B26B46CB2C5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6B69EDDBF61D30E2E0F28D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B8142B691BD5510900DC763A /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8142B681BD5510900DC763A /* UserInfoManager.swift */; settings = {ASSET_TAGS = (); }; };
+		B8142B6B1BD5523900DC763A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8142B6A1BD5523900DC763A /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B8822AC11BD3B64E0088A114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8822AC01BD3B64E0088A114 /* AppDelegate.swift */; };
 		B8822AC31BD3B64E0088A114 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8822AC21BD3B64E0088A114 /* ViewController.swift */; };
 		B8822AC61BD3B64E0088A114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8822AC41BD3B64E0088A114 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		3CCC9E4B088B690E6C8A0EFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6A6B69EDDBF61D30E2E0F28D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8142B681BD5510900DC763A /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		B8142B6A1BD5523900DC763A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B8822ABD1BD3B64E0088A114 /* FastGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8822AC01BD3B64E0088A114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8822AC21BD3B64E0088A114 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 			children = (
 				B8822AC01BD3B64E0088A114 /* AppDelegate.swift */,
 				B8822AC21BD3B64E0088A114 /* ViewController.swift */,
+				B8142B681BD5510900DC763A /* UserInfoManager.swift */,
+				B8142B6A1BD5523900DC763A /* HomeViewController.swift */,
 				B8822AC41BD3B64E0088A114 /* Main.storyboard */,
 				B8822AC71BD3B64E0088A114 /* Assets.xcassets */,
 				B8822AC91BD3B64E0088A114 /* LaunchScreen.storyboard */,
@@ -332,6 +338,8 @@
 			files = (
 				B8822AC31BD3B64E0088A114 /* ViewController.swift in Sources */,
 				B8822AC11BD3B64E0088A114 /* AppDelegate.swift in Sources */,
+				B8142B691BD5510900DC763A /* UserInfoManager.swift in Sources */,
+				B8142B6B1BD5523900DC763A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
