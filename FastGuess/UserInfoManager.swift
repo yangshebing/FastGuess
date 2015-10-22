@@ -8,16 +8,16 @@
 
 import Foundation
 //写法一：
-//public class UserInfoManager {
-//    var userName:String?
-//    var avatar:String?
-//    var userId = 0
-//    var age:String?
-//    var sex:String?
-//    public static let sharedInstance: UserInfoManager = {
-//        return UserInfoManager()
-//        }()
-//}
+public class UserInfoManager {
+    var userName:String?
+    var avatar:String?
+    var userId = 0
+    var age:String?
+    var sex:String?
+    public static let sharedInstance: UserInfoManager = {
+        return UserInfoManager()
+        }()
+}
 
 //写法二：
 //let _sharedInstance =  ()
