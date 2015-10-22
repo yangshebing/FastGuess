@@ -20,7 +20,7 @@ public class UserInfoManager {
 }
 
 //写法二：
-//let _sharedInstance =  ()
+//let _sharedInstance =  UserInfoManager()
 //class UserInfoManager {
 //    var userName:String?
 //    var avatar:String?
