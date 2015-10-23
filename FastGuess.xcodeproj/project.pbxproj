@@ -17,6 +17,7 @@
 		B8822ACB1BD3B64E0088A114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8822AC91BD3B64E0088A114 /* LaunchScreen.storyboard */; };
 		B8822AD61BD3B64E0088A114 /* FastGuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8822AD51BD3B64E0088A114 /* FastGuessTests.swift */; };
 		B8822AE11BD3B64E0088A114 /* FastGuessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8822AE01BD3B64E0088A114 /* FastGuessUITests.swift */; };
+		B8ABB32B1BDA9EE500393D8F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABB32A1BDA9EE500393D8F /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		B8822ADC1BD3B64E0088A114 /* FastGuessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastGuessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8822AE01BD3B64E0088A114 /* FastGuessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastGuessUITests.swift; sourceTree = "<group>"; };
 		B8822AE21BD3B64E0088A114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8ABB32A1BDA9EE500393D8F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		EC33D4AAB68AFED3B5BC1EA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 				B8822AC71BD3B64E0088A114 /* Assets.xcassets */,
 				B8822AC91BD3B64E0088A114 /* LaunchScreen.storyboard */,
 				B8822ACC1BD3B64E0088A114 /* Info.plist */,
+				B8ABB32A1BDA9EE500393D8F /* Common.swift */,
 			);
 			path = FastGuess;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				B8822AC31BD3B64E0088A114 /* MainViewController.swift in Sources */,
 				B8822AC11BD3B64E0088A114 /* AppDelegate.swift in Sources */,
 				B8142B691BD5510900DC763A /* UserInfoManager.swift in Sources */,
+				B8ABB32B1BDA9EE500393D8F /* Common.swift in Sources */,
 				B8142B6B1BD5523900DC763A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

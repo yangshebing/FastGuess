@@ -52,7 +52,7 @@ class MainViewController: UIViewController {
 //        self.view.addSubview(pushButton!)
     }
     
-    // MARK: - ClickEvent
+    //MARK: - ClickEvent
     func pushAction() {
         let homeVC = HomeViewController()
 //        self.presentViewController(homeVC, animated: true, completion: nil)
