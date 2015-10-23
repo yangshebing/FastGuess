@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import MBProgressHUD
 //import UserInfoManager
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 //    var imgView:UIImageView?
     var result:NSData?
 //    var pushButton:UIButton?
