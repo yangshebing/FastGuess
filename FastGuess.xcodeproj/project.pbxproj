@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		24B66CF73D456B26B46CB2C5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6B69EDDBF61D30E2E0F28D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		B8142B691BD5510900DC763A /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8142B681BD5510900DC763A /* UserInfoManager.swift */; };
-		B8142B6B1BD5523900DC763A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8142B6A1BD5523900DC763A /* HomeViewController.swift */; };
 		B8822AC11BD3B64E0088A114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8822AC01BD3B64E0088A114 /* AppDelegate.swift */; };
-		B8822AC31BD3B64E0088A114 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8822AC21BD3B64E0088A114 /* MainViewController.swift */; };
 		B8822AC61BD3B64E0088A114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8822AC41BD3B64E0088A114 /* Main.storyboard */; };
 		B8822AC81BD3B64E0088A114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8822AC71BD3B64E0088A114 /* Assets.xcassets */; };
 		B8822ACB1BD3B64E0088A114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8822AC91BD3B64E0088A114 /* LaunchScreen.storyboard */; };
 		B8822AD61BD3B64E0088A114 /* FastGuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8822AD51BD3B64E0088A114 /* FastGuessTests.swift */; };
 		B8822AE11BD3B64E0088A114 /* FastGuessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8822AE01BD3B64E0088A114 /* FastGuessUITests.swift */; };
+		B88CD22E1BDFD85D00B01831 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CD2241BDFD85D00B01831 /* BaseNavigationController.swift */; };
+		B88CD22F1BDFD85D00B01831 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CD2291BDFD85D00B01831 /* HomeViewController.swift */; };
+		B88CD2301BDFD85D00B01831 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CD22A1BDFD85D00B01831 /* MainViewController.swift */; };
+		B88CD2311BDFD85D00B01831 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CD22B1BDFD85D00B01831 /* UserInfoManager.swift */; };
+		B88CD2351BDFD8D100B01831 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CD2341BDFD8D100B01831 /* BaseViewController.swift */; };
 		B8ABB32B1BDA9EE500393D8F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABB32A1BDA9EE500393D8F /* Common.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,11 +42,8 @@
 /* Begin PBXFileReference section */
 		3CCC9E4B088B690E6C8A0EFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6A6B69EDDBF61D30E2E0F28D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B8142B681BD5510900DC763A /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
-		B8142B6A1BD5523900DC763A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B8822ABD1BD3B64E0088A114 /* FastGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8822AC01BD3B64E0088A114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8822AC21BD3B64E0088A114 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B8822AC51BD3B64E0088A114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8822AC71BD3B64E0088A114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8822ACA1BD3B64E0088A114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +54,11 @@
 		B8822ADC1BD3B64E0088A114 /* FastGuessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastGuessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8822AE01BD3B64E0088A114 /* FastGuessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastGuessUITests.swift; sourceTree = "<group>"; };
 		B8822AE21BD3B64E0088A114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B88CD2241BDFD85D00B01831 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		B88CD2291BDFD85D00B01831 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B88CD22A1BDFD85D00B01831 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B88CD22B1BDFD85D00B01831 /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		B88CD2341BDFD8D100B01831 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B8ABB32A1BDA9EE500393D8F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		EC33D4AAB68AFED3B5BC1EA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,13 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				B8822AC01BD3B64E0088A114 /* AppDelegate.swift */,
-				B8822AC21BD3B64E0088A114 /* MainViewController.swift */,
-				B8142B681BD5510900DC763A /* UserInfoManager.swift */,
-				B8142B6A1BD5523900DC763A /* HomeViewController.swift */,
 				B8822AC41BD3B64E0088A114 /* Main.storyboard */,
-				B8822AC71BD3B64E0088A114 /* Assets.xcassets */,
 				B8822AC91BD3B64E0088A114 /* LaunchScreen.storyboard */,
-				B8822ACC1BD3B64E0088A114 /* Info.plist */,
+				B88CD2221BDFD85D00B01831 /* Base */,
+				B88CD2271BDFD85D00B01831 /* Main */,
+				B88CD2331BDFD87A00B01831 /* Supporting Files */,
 				B8ABB32A1BDA9EE500393D8F /* Common.swift */,
 			);
 			path = FastGuess;
@@ -147,6 +149,82 @@
 				B8822AE21BD3B64E0088A114 /* Info.plist */,
 			);
 			path = FastGuessUITests;
+			sourceTree = "<group>";
+		};
+		B88CD2221BDFD85D00B01831 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B88CD2231BDFD85D00B01831 /* C */,
+				B88CD2251BDFD85D00B01831 /* M */,
+				B88CD2261BDFD85D00B01831 /* V */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B88CD2231BDFD85D00B01831 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				B88CD2241BDFD85D00B01831 /* BaseNavigationController.swift */,
+				B88CD2341BDFD8D100B01831 /* BaseViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		B88CD2251BDFD85D00B01831 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		B88CD2261BDFD85D00B01831 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		B88CD2271BDFD85D00B01831 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B88CD2281BDFD85D00B01831 /* C */,
+				B88CD22C1BDFD85D00B01831 /* M */,
+				B88CD22D1BDFD85D00B01831 /* V */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B88CD2281BDFD85D00B01831 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				B88CD2291BDFD85D00B01831 /* HomeViewController.swift */,
+				B88CD22A1BDFD85D00B01831 /* MainViewController.swift */,
+				B88CD22B1BDFD85D00B01831 /* UserInfoManager.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		B88CD22C1BDFD85D00B01831 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		B88CD22D1BDFD85D00B01831 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		B88CD2331BDFD87A00B01831 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8822ACC1BD3B64E0088A114 /* Info.plist */,
+				B8822AC71BD3B64E0088A114 /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F0F316D1E92356F1EB56A61D /* Pods */ = {
@@ -339,11 +417,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8822AC31BD3B64E0088A114 /* MainViewController.swift in Sources */,
 				B8822AC11BD3B64E0088A114 /* AppDelegate.swift in Sources */,
-				B8142B691BD5510900DC763A /* UserInfoManager.swift in Sources */,
 				B8ABB32B1BDA9EE500393D8F /* Common.swift in Sources */,
-				B8142B6B1BD5523900DC763A /* HomeViewController.swift in Sources */,
+				B88CD2311BDFD85D00B01831 /* UserInfoManager.swift in Sources */,
+				B88CD22E1BDFD85D00B01831 /* BaseNavigationController.swift in Sources */,
+				B88CD22F1BDFD85D00B01831 /* HomeViewController.swift in Sources */,
+				B88CD2351BDFD8D100B01831 /* BaseViewController.swift in Sources */,
+				B88CD2301BDFD85D00B01831 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

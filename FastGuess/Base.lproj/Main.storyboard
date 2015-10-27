@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="D84-t2-YF0">
             <objects>
-                <navigationController id="5Mp-SW-qgs" sceneMemberID="viewController">
+                <navigationController id="5Mp-SW-qgs" customClass="BaseNavigationController" customModule="FastGuess" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZHO-yb-0vd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -51,45 +51,17 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9M-EO-6Tv">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="F52-SZ-aKI"/>
-                                    <constraint firstAttribute="width" constant="100" id="V2g-Uj-q57"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="F52-SZ-aKI"/>
-                                        <exclude reference="V2g-Uj-q57"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="F52-SZ-aKI"/>
-                                        <include reference="V2g-Uj-q57"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="senderAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61M-1O-4w8"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YK4-bI-0y6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pfq-Zw-jiI"/>
-                            <constraint firstItem="o9M-EO-6Tv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="VUu-8L-IMC"/>
-                            <constraint firstItem="o9M-EO-6Tv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="axk-Mo-75G"/>
                             <constraint firstItem="YK4-bI-0y6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nNB-TG-fqp"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="YK4-bI-0y6"/>
-                                <exclude reference="o9M-EO-6Tv"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="VUu-8L-IMC"/>
-                                <exclude reference="axk-Mo-75G"/>
                                 <exclude reference="Pfq-Zw-jiI"/>
                                 <exclude reference="nNB-TG-fqp"/>
                             </mask>
@@ -97,11 +69,8 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="YK4-bI-0y6"/>
-                                <include reference="o9M-EO-6Tv"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="VUu-8L-IMC"/>
-                                <include reference="axk-Mo-75G"/>
                                 <include reference="Pfq-Zw-jiI"/>
                                 <include reference="nNB-TG-fqp"/>
                             </mask>
@@ -110,7 +79,6 @@
                     <navigationItem key="navigationItem" id="P9k-hq-tXR"/>
                     <connections>
                         <outlet property="imgView" destination="YK4-bI-0y6" id="L2y-Qj-bxK"/>
-                        <outlet property="pushButton" destination="o9M-EO-6Tv" id="7cW-z9-pGU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

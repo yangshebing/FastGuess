@@ -10,15 +10,11 @@ import UIKit
 import Alamofire
 import MBProgressHUD
 //import UserInfoManager
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
 //    var imgView:UIImageView?
     var result:NSData?
 //    var pushButton:UIButton?
     @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var pushButton: UIButton!
-    @IBAction func senderAction(sender: UIButton) {
-        self.pushAction()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,15 +35,16 @@ class MainViewController: UIViewController {
     }
 
     func initSubViews() {
+        
 //        imgView = UIImageView.init(frame: CGRectMake(0, 64 + 100, 200, 200))
 //        self.view.addSubview(imgView!)
 //        pushButton = UIButton.init(type: .Custom)
-    pushButton.backgroundColor = UIColor.blackColor()
+//    pushButton.backgroundColor = UIColor.blackColor()
 //        pushButton!.frame = CGRectMake((self.view.frame.size.width - 100) / 2.0, 64, 100, 100)
-    pushButton.setTitle("pushAction", forState: .Normal)
-    pushButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        pushButton.layer.cornerRadius = 3
-        pushButton.layer.masksToBounds = true
+//    pushButton.setTitle("pushAction", forState: .Normal)
+//    pushButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+//        pushButton.layer.cornerRadius = 3
+//        pushButton.layer.masksToBounds = true
 //        pushButton!.addTarget(self, action:"pushAction", forControlEvents: .TouchUpInside)
 //        self.view.addSubview(pushButton!)
     }
