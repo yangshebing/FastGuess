@@ -25,3 +25,11 @@ func RGBDec(r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ alpha: CGFloat = 1.0) -> U
 func UIColorFromHexColor(hexColor: Int) ->UIColor {
     return UIColor(red: CGFloat((hexColor & 0xFF0000)>>16)/255.0, green: CGFloat((hexColor&0xFF00)>>8)/255.0, blue: CGFloat(hexColor&0xFF)/255.0, alpha: 1.0)
 }
+
+func bMainColor() ->UIColor {
+    return UIColorFromHexColor(0x4bc1d2)
+}
+
+func bBackGroundColor() -> UIColor {
+    return UIColorFromHexColor(0xdedede);
+}

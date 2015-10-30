@@ -1,13 +1,16 @@
 PODS:
   - Alamofire (3.0.0)
   - MBProgressHUD (0.9.1)
+  - SnapKit (0.15.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - MBProgressHUD (~> 0.9.0)
+  - SnapKit (~> 0.15.0)
 
 SPEC CHECKSUMS:
   Alamofire: b61782387f81bcc538a0284cf2bb5d7995cd0a80
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
 
 COCOAPODS: 0.38.2

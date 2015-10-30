@@ -11,7 +11,8 @@ import UIKit
 class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.barTintColor = UIColorFromHexColor(0x4bc1d2)
+        self.navigationBar.barTintColor = bMainColor()
+        self.navigationBar.translucent = false
 //        UIApplication.sharedApplication().statusBarStyle = .LightContent;
     }
     

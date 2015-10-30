@@ -10,16 +10,25 @@ import UIKit
 import Alamofire
 import MBProgressHUD
 //import UserInfoManager
-class MainViewController: BaseViewController {
+class MainViewController: BaseViewController, UIScrollViewDelegate {
 //    var imgView:UIImageView?
     var result:NSData?
+    let pageCount = 0
+    @IBOutlet weak var cycleScrollView: UIScrollView!
+    
+    @IBOutlet weak var pageCtrl: UIPageControl!
+    
+    @IBAction func pageControlChangeAction(sender: UIPageControl) {
+        cycleScrollView.setContentOffset(CGPointMake((CGFloat)(pageCtrl.currentPage) * kScreenWidth, cycleScrollView.contentOffset.y), animated: true)
+    }
+    
 //    var pushButton:UIButton?
     @IBOutlet weak var imgView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.grayColor()
-        self.loadPicture()
+        self.view.backgroundColor = bBackGroundColor()
+//        self.loadPicture()
         Alamofire.request(.GET, "http://b.hiphotos.baidu.com/image/pic/item/f9198618367adab49ba3154489d4b31c8701e442.jpg")
         .responseJSON { (response) -> Void in
 //            print(response.data)
@@ -30,12 +39,39 @@ class MainViewController: BaseViewController {
         }
         //初始化子视图
         self.initSubViews()
-        UserInfoManager.sharedInstance.userName = "杨社兵"
+//        UserInfoManager.sharedInstance.userName = "杨社兵"
+        cycleScrollView.contentSize = CGSizeMake(kScreenWidth * 5, 150)
+        let pictures = ["cycle_one.png", "cycle_two.png", "cycle_three.png"]
+        for var i = 0; i < pictures.count + 2; i++ {
+            let imgView = UIImageView.init();
+            imgView.translatesAutoresizingMaskIntoConstraints = false
+            if i == 0 {
+                imgView.image = UIImage.init(named: pictures.last!)
+            } else if i == (pictures.count + 1) {
+                imgView.image = UIImage.init(named: pictures.first!)
+            } else {
+                imgView.image = UIImage.init(named: pictures[i - 1])
+            }
+            cycleScrollView.addSubview(imgView)
+            var cn = NSLayoutConstraint.init(item: imgView, attribute: .Top, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Top, multiplier: 1.0, constant: 0.0)
+            cycleScrollView.addConstraint(cn)
+            cn = NSLayoutConstraint.init(item: imgView, attribute: .Left, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Left, multiplier: 1.0, constant: (CGFloat)(i) * kScreenWidth)
+            cycleScrollView.addConstraint(cn)
+            cn = NSLayoutConstraint.init(item: imgView, attribute: .Width, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Width, multiplier: 1.0, constant: 0.0)
+            cycleScrollView.addConstraint(cn)
+            cn = NSLayoutConstraint.init(item: imgView, attribute: .Height, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Height, multiplier: 1.0, constant: 0.0)
+            cycleScrollView.addConstraint(cn)
+        }
+        
+        pageCtrl.currentPage = 0
+        pageCtrl.backgroundColor = UIColor.clearColor()
+        pageCtrl.numberOfPages = 3
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     func initSubViews() {
-        
+        self.imgView.hidden = true
 //        imgView = UIImageView.init(frame: CGRectMake(0, 64 + 100, 200, 200))
 //        self.view.addSubview(imgView!)
 //        pushButton = UIButton.init(type: .Custom)
@@ -47,6 +83,20 @@ class MainViewController: BaseViewController {
 //        pushButton.layer.masksToBounds = true
 //        pushButton!.addTarget(self, action:"pushAction", forControlEvents: .TouchUpInside)
 //        self.view.addSubview(pushButton!)
+    }
+    
+    //MARK: - UIScrollViewDelegate
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let page = (Int)(scrollView.contentOffset.x / kScreenWidth);
+        if page > 3 {
+            scrollView .setContentOffset(CGPointMake(kScreenWidth, scrollView.contentOffset.y), animated: false)
+            pageCtrl.currentPage = 0
+        } else if page < 1 {
+            scrollView.setContentOffset(CGPointMake((CGFloat)(pageCtrl.numberOfPages) * kScreenWidth, scrollView.contentOffset.y), animated: false)
+            pageCtrl.currentPage = 2
+        } else {
+            pageCtrl.currentPage = page - 1
+        }
     }
     
     //MARK: - ClickEvent
