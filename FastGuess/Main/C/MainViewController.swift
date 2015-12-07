@@ -14,6 +14,8 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
 //    var imgView:UIImageView?
     var result:NSData?
     let pageCount = 0
+    var homeTableView:HomeTableView!
+    
     @IBOutlet weak var cycleScrollView: UIScrollView!
     
     @IBOutlet weak var pageCtrl: UIPageControl!
@@ -40,41 +42,15 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
         //初始化子视图
         self.initSubViews()
 //        UserInfoManager.sharedInstance.userName = "杨社兵"
-        cycleScrollView.contentSize = CGSizeMake(kScreenWidth * 5, 150)
-        let pictures = ["cycle_one.png", "cycle_two.png", "cycle_three.png"]
-        for var i = 0; i < pictures.count + 2; i++ {
-            let imgView = UIImageView.init();
-            imgView.translatesAutoresizingMaskIntoConstraints = false
-            if i == 0 {
-                imgView.image = UIImage.init(named: pictures.last!)
-            } else if i == (pictures.count + 1) {
-                imgView.image = UIImage.init(named: pictures.first!)
-            } else {
-                imgView.image = UIImage.init(named: pictures[i - 1])
-            }
-            cycleScrollView.addSubview(imgView)
-            var cn = NSLayoutConstraint.init(item: imgView, attribute: .Top, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Top, multiplier: 1.0, constant: 0.0)
-            cycleScrollView.addConstraint(cn)
-            cn = NSLayoutConstraint.init(item: imgView, attribute: .Left, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Left, multiplier: 1.0, constant: (CGFloat)(i) * kScreenWidth)
-            cycleScrollView.addConstraint(cn)
-            cn = NSLayoutConstraint.init(item: imgView, attribute: .Width, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Width, multiplier: 1.0, constant: 0.0)
-            cycleScrollView.addConstraint(cn)
-            cn = NSLayoutConstraint.init(item: imgView, attribute: .Height, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Height, multiplier: 1.0, constant: 0.0)
-            cycleScrollView.addConstraint(cn)
-        }
-        
-        pageCtrl.currentPage = 0
-        pageCtrl.backgroundColor = UIColor.clearColor()
-        pageCtrl.numberOfPages = 3
         
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     func initSubViews() {
         self.imgView.hidden = true
-//        imgView = UIImageView.init(frame: CGRectMake(0, 64 + 100, 200, 200))
+//        imgView = UIImageView(frame: CGRectMake(0, 64 + 100, 200, 200))
 //        self.view.addSubview(imgView!)
-//        pushButton = UIButton.init(type: .Custom)
+//        pushButton = UIButton(type: .Custom)
 //    pushButton.backgroundColor = UIColor.blackColor()
 //        pushButton!.frame = CGRectMake((self.view.frame.size.width - 100) / 2.0, 64, 100, 100)
 //    pushButton.setTitle("pushAction", forState: .Normal)
@@ -83,6 +59,46 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
 //        pushButton.layer.masksToBounds = true
 //        pushButton!.addTarget(self, action:"pushAction", forControlEvents: .TouchUpInside)
 //        self.view.addSubview(pushButton!)
+        cycleScrollView.contentSize = CGSizeMake(kScreenWidth * 5, 150)
+        let pictures = ["cycle_one.png", "cycle_two.png", "cycle_three.png"]
+        for var i = 0; i < pictures.count + 2; i++ {
+            let imgView = UIImageView();
+            imgView.translatesAutoresizingMaskIntoConstraints = false
+            if i == 0 {
+                imgView.image = UIImage(named: pictures.last!)
+            } else if i == (pictures.count + 1) {
+                imgView.image = UIImage(named: pictures.first!)
+            } else {
+                imgView.image = UIImage(named: pictures[i - 1])
+            }
+            cycleScrollView.addSubview(imgView)
+            var cn = NSLayoutConstraint(item: imgView, attribute: .Top, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Top, multiplier: 1.0, constant: 0.0)
+            cycleScrollView.addConstraint(cn)
+            cn = NSLayoutConstraint(item: imgView, attribute: .Left, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Left, multiplier: 1.0, constant: (CGFloat)(i) * kScreenWidth)
+            cycleScrollView.addConstraint(cn)
+            cn = NSLayoutConstraint(item: imgView, attribute: .Width, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Width, multiplier: 1.0, constant: 0.0)
+            cycleScrollView.addConstraint(cn)
+            cn = NSLayoutConstraint(item: imgView, attribute: .Height, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Height, multiplier: 1.0, constant: 0.0)
+            cycleScrollView.addConstraint(cn)
+        }
+        
+        pageCtrl.currentPage = 0
+        pageCtrl.backgroundColor = UIColor.clearColor()
+        pageCtrl.numberOfPages = 3
+        
+        
+        homeTableView = HomeTableView(frame: CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.height - 150), style: .Grouped)
+        self.view.addSubview(homeTableView)
+        homeTableView.dataList = ["菠萝", "香蕉", "橘子", "苹果", "柚子"]
+        homeTableView.translatesAutoresizingMaskIntoConstraints = false
+        var cn = NSLayoutConstraint(item: homeTableView, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 150.0)
+        self.view.addConstraint(cn)
+        cn = NSLayoutConstraint(item: homeTableView, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0.0)
+        self.view.addConstraint(cn)
+        cn = NSLayoutConstraint(item: homeTableView, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 1.0, constant: self.view.frame.width)
+        self.view.addConstraint(cn)
+        cn = NSLayoutConstraint(item: homeTableView, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: 1.0, constant: kScreenHeight - 150)
+        self.view.addConstraint(cn)
     }
     
     //MARK: - UIScrollViewDelegate
@@ -107,7 +123,7 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
     }
     
     func reloadDataRefreshUI() {
-        imgView!.image = UIImage.init(data: self.result!)
+        imgView!.image = UIImage(data: self.result!)
     }
     
     private func showProgressHUD() {

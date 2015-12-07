@@ -20,6 +20,9 @@
 		B88CD2311BDFD85D00B01831 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CD22B1BDFD85D00B01831 /* UserInfoManager.swift */; };
 		B88CD2351BDFD8D100B01831 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CD2341BDFD8D100B01831 /* BaseViewController.swift */; };
 		B8ABB32B1BDA9EE500393D8F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ABB32A1BDA9EE500393D8F /* Common.swift */; };
+		B8B524EB1BFCBE5100EA824D /* CircleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B524EA1BFCBE5100EA824D /* CircleScrollView.swift */; };
+		B8B524ED1BFCCBC600EA824D /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B524EC1BFCCBC600EA824D /* HomeTableView.swift */; };
+		B8B524EF1BFCD94400EA824D /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B524EE1BFCD94400EA824D /* HomeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		B88CD22B1BDFD85D00B01831 /* UserInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		B88CD2341BDFD8D100B01831 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B8ABB32A1BDA9EE500393D8F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		B8B524EA1BFCBE5100EA824D /* CircleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleScrollView.swift; sourceTree = "<group>"; };
+		B8B524EC1BFCCBC600EA824D /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
+		B8B524EE1BFCD94400EA824D /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		EC33D4AAB68AFED3B5BC1EA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,6 +220,9 @@
 		B88CD22D1BDFD85D00B01831 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				B8B524EA1BFCBE5100EA824D /* CircleScrollView.swift */,
+				B8B524EC1BFCCBC600EA824D /* HomeTableView.swift */,
+				B8B524EE1BFCD94400EA824D /* HomeCell.swift */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -417,11 +426,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B524ED1BFCCBC600EA824D /* HomeTableView.swift in Sources */,
 				B8822AC11BD3B64E0088A114 /* AppDelegate.swift in Sources */,
 				B8ABB32B1BDA9EE500393D8F /* Common.swift in Sources */,
 				B88CD2311BDFD85D00B01831 /* UserInfoManager.swift in Sources */,
+				B8B524EF1BFCD94400EA824D /* HomeCell.swift in Sources */,
 				B88CD22E1BDFD85D00B01831 /* BaseNavigationController.swift in Sources */,
 				B88CD22F1BDFD85D00B01831 /* HomeViewController.swift in Sources */,
+				B8B524EB1BFCBE5100EA824D /* CircleScrollView.swift in Sources */,
 				B88CD2351BDFD8D100B01831 /* BaseViewController.swift in Sources */,
 				B88CD2301BDFD85D00B01831 /* MainViewController.swift in Sources */,
 			);
