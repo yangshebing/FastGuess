@@ -16,7 +16,7 @@ class HomeCell: UITableViewCell {
     // 重写初始化方法
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier);
-        self.initSubviews()
+        initSubviews()
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:)has not been implemented")
@@ -30,21 +30,21 @@ class HomeCell: UITableViewCell {
     func initSubviews () {
         imgView = UIImageView(frame: CGRectMake(0, 0, 30, 30))
         imgView.image = UIImage(named: "exam.png")
-        self.contentView.addSubview(imgView);
+        contentView.addSubview(imgView);
         
-        titleLabel = UILabel(frame: CGRectMake(0, 0, self.frame.size.width, self.frame.size.height))
+        titleLabel = UILabel(frame: CGRectMake(0, 0, frame.size.width, frame.size.height))
         titleLabel.textAlignment = .Left;
         titleLabel.textColor = UIColor.lightGrayColor();
         titleLabel.font = UIFont.systemFontOfSize(15);
         titleLabel.text = "心灵鸡汤，每天一起干"
-        self.contentView.addSubview(titleLabel)
+        contentView.addSubview(titleLabel)
         
         button = UIButton(type: .Custom)
-        button.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
+        button.frame = CGRectMake(0, 0, frame.size.width, frame.size.height)
         button.setTitle("关注", forState: .Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         button.backgroundColor = UIColor.grayColor()
-        self.contentView.addSubview(button)
+        contentView.addSubview(button)
     }
     
     override func layoutSubviews() {
@@ -53,35 +53,35 @@ class HomeCell: UITableViewCell {
         imgView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
-        var cn = NSLayoutConstraint(item: imgView, attribute: .Top, relatedBy: .Equal, toItem: self.contentView, attribute: .Top, multiplier: 1.0, constant: 15)
-        self.contentView.addConstraint(cn)
-        cn = NSLayoutConstraint(item: imgView, attribute: .Left, relatedBy: .Equal, toItem: self.contentView, attribute: .Left, multiplier: 1.0, constant: 15)
-        self.contentView.addConstraint(cn)
+        var cn = NSLayoutConstraint(item: imgView, attribute: .Top, relatedBy: .Equal, toItem: contentView, attribute: .Top, multiplier: 1.0, constant: 15)
+        contentView.addConstraint(cn)
+        cn = NSLayoutConstraint(item: imgView, attribute: .Left, relatedBy: .Equal, toItem: contentView, attribute: .Left, multiplier: 1.0, constant: 15)
+        contentView.addConstraint(cn)
         
         cn = NSLayoutConstraint(item: imgView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: 50)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
         cn = NSLayoutConstraint(item: imgView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 50)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
         
         cn = NSLayoutConstraint(item: titleLabel, attribute: .Top, relatedBy: .Equal, toItem: imgView, attribute: .Top, multiplier: 1.0, constant: 0)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
         cn = NSLayoutConstraint(item: titleLabel, attribute: .Leading, relatedBy: .Equal, toItem: imgView, attribute: .Trailing, multiplier: 1.0, constant: 10)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
         
         cn = NSLayoutConstraint(item: titleLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: 100)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
         cn = NSLayoutConstraint(item: titleLabel, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 15)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
         
         cn = NSLayoutConstraint(item: button, attribute: .Top, relatedBy: .Equal, toItem: imgView, attribute: .Top, multiplier: 1.0, constant: 0)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
         cn = NSLayoutConstraint(item: button, attribute: .Leading, relatedBy: .Equal, toItem: titleLabel, attribute: .Trailing, multiplier: 1.0, constant: 120)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
         
         cn = NSLayoutConstraint(item: button, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: 45)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
         cn = NSLayoutConstraint(item: button, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 30)
-        self.contentView.addConstraint(cn)
+        contentView.addConstraint(cn)
     }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

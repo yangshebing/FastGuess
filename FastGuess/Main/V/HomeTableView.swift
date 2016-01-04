@@ -9,33 +9,30 @@
 import UIKit
 
 class HomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
-    var dataList:[AnyObject]!
+    var dataList = [AnyObject]()
     let identify = "homeCellId"
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame:frame, style:style)
-        self.initSubviews()
-//        super.init(frame: CGRect)
+        initSubviews()
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     func initSubviews () {
-        dataList = []
-        self.dataSource = self;
-        self.delegate = self;
+        dataSource = self;
+        delegate = self;
         //注册单元格class
-        self.registerClass(HomeCell.self, forCellReuseIdentifier: identify)
-        self.separatorStyle = .None;
+        registerClass(HomeCell.self, forCellReuseIdentifier: identify)
+        separatorStyle = .None;
         //注册单元格xib
-//        self.registerNib(HomeCell.self, forCellReuseIdentifier:identify)
+//        registerNib(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier:identify)
     }
     
     //MARK: - UITableViewDataSource
 
-    override func numberOfRowsInSection(section: Int) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1; //default 1
     }
 
@@ -44,7 +41,7 @@ class HomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(identify)as!HomeCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(identify)as! HomeCell
         cell.selectionStyle = .None;
         cell.titleStr = dataList[indexPath.row] as? String
         return cell

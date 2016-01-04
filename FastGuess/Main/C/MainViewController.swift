@@ -29,7 +29,7 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = bBackGroundColor()
+        view.backgroundColor = bBackGroundColor()
 //        self.loadPicture()
         Alamofire.request(.GET, "http://b.hiphotos.baidu.com/image/pic/item/f9198618367adab49ba3154489d4b31c8701e442.jpg")
         .responseJSON { (response) -> Void in
@@ -47,7 +47,7 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
     }
 
     func initSubViews() {
-        self.imgView.hidden = true
+        imgView.hidden = true
 //        imgView = UIImageView(frame: CGRectMake(0, 64 + 100, 200, 200))
 //        self.view.addSubview(imgView!)
 //        pushButton = UIButton(type: .Custom)
@@ -87,18 +87,18 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
         pageCtrl.numberOfPages = 3
         
         
-        homeTableView = HomeTableView(frame: CGRectMake(0, 150, self.view.frame.size.width, self.view.frame.size.height - 150), style: .Grouped)
-        self.view.addSubview(homeTableView)
+        homeTableView = HomeTableView(frame: CGRectMake(0, 150, view.frame.size.width, view.frame.size.height - 150), style: .Grouped)
+        view.addSubview(homeTableView)
         homeTableView.dataList = ["菠萝", "香蕉", "橘子", "苹果", "柚子"]
         homeTableView.translatesAutoresizingMaskIntoConstraints = false
-        var cn = NSLayoutConstraint(item: homeTableView, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 150.0)
-        self.view.addConstraint(cn)
-        cn = NSLayoutConstraint(item: homeTableView, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0.0)
-        self.view.addConstraint(cn)
-        cn = NSLayoutConstraint(item: homeTableView, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 1.0, constant: self.view.frame.width)
-        self.view.addConstraint(cn)
-        cn = NSLayoutConstraint(item: homeTableView, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: 1.0, constant: kScreenHeight - 150)
-        self.view.addConstraint(cn)
+        var cn = NSLayoutConstraint(item: homeTableView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 150.0)
+        view.addConstraint(cn)
+        cn = NSLayoutConstraint(item: homeTableView, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 0.0)
+        view.addConstraint(cn)
+        cn = NSLayoutConstraint(item: homeTableView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1.0, constant: view.frame.width)
+        view.addConstraint(cn)
+        cn = NSLayoutConstraint(item: homeTableView, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1.0, constant: kScreenHeight - 150)
+        view.addConstraint(cn)
     }
     
     //MARK: - UIScrollViewDelegate
@@ -119,22 +119,22 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
     func pushAction() {
         let homeVC = HomeViewController()
 //        self.presentViewController(homeVC, animated: true, completion: nil)
-        self.navigationController?.pushViewController(homeVC, animated: true)
+        navigationController?.pushViewController(homeVC, animated: true)
     }
     
     func reloadDataRefreshUI() {
-        imgView!.image = UIImage(data: self.result!)
+        imgView!.image = UIImage(data: result!)
     }
     
     private func showProgressHUD() {
     
-        let progressHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        let progressHUD = MBProgressHUD.showHUDAddedTo(view, animated: true)
         progressHUD.labelText = "正在加载..."
         
     }
     
     private func hideProgressHUD() {
-        MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+        MBProgressHUD.hideAllHUDsForView(view, animated: true)
        
     }
     
