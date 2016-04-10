@@ -41,27 +41,14 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
         }
         //初始化子视图
         self.initSubViews()
-//        UserInfoManager.sharedInstance.userName = "杨社兵"
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     func initSubViews() {
         imgView.hidden = true
-//        imgView = UIImageView(frame: CGRectMake(0, 64 + 100, 200, 200))
-//        self.view.addSubview(imgView!)
-//        pushButton = UIButton(type: .Custom)
-//    pushButton.backgroundColor = UIColor.blackColor()
-//        pushButton!.frame = CGRectMake((self.view.frame.size.width - 100) / 2.0, 64, 100, 100)
-//    pushButton.setTitle("pushAction", forState: .Normal)
-//    pushButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-//        pushButton.layer.cornerRadius = 3
-//        pushButton.layer.masksToBounds = true
-//        pushButton!.addTarget(self, action:"pushAction", forControlEvents: .TouchUpInside)
-//        self.view.addSubview(pushButton!)
         cycleScrollView.contentSize = CGSizeMake(kScreenWidth * 5, 150)
         let pictures = ["cycle_one.png", "cycle_two.png", "cycle_three.png"]
-        for var i = 0; i < pictures.count + 2; i++ {
+        for i in 0 ..< pictures.count + 2 {
             let imgView = UIImageView();
             imgView.translatesAutoresizingMaskIntoConstraints = false
             if i == 0 {
@@ -72,14 +59,12 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
                 imgView.image = UIImage(named: pictures[i - 1])
             }
             cycleScrollView.addSubview(imgView)
-            var cn = NSLayoutConstraint(item: imgView, attribute: .Top, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Top, multiplier: 1.0, constant: 0.0)
-            cycleScrollView.addConstraint(cn)
-            cn = NSLayoutConstraint(item: imgView, attribute: .Left, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Left, multiplier: 1.0, constant: (CGFloat)(i) * kScreenWidth)
-            cycleScrollView.addConstraint(cn)
-            cn = NSLayoutConstraint(item: imgView, attribute: .Width, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Width, multiplier: 1.0, constant: 0.0)
-            cycleScrollView.addConstraint(cn)
-            cn = NSLayoutConstraint(item: imgView, attribute: .Height, relatedBy: .Equal, toItem: cycleScrollView, attribute: .Height, multiplier: 1.0, constant: 0.0)
-            cycleScrollView.addConstraint(cn)
+            imgView.snp_makeConstraints(closure: { (make) in
+                make.top.equalTo(cycleScrollView.snp_top)
+                make.left.equalTo(cycleScrollView.snp_left).offset((CGFloat)(i) * kScreenWidth)
+                make.width.equalTo(cycleScrollView.snp_width)
+                make.height.equalTo(cycleScrollView.snp_height)
+            })
         }
         
         pageCtrl.currentPage = 0
@@ -89,16 +74,13 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
         
         homeTableView = HomeTableView(frame: CGRectMake(0, 150, view.frame.size.width, view.frame.size.height - 150), style: .Grouped)
         view.addSubview(homeTableView)
-        homeTableView.dataList = ["菠萝", "香蕉", "橘子", "苹果", "柚子"]
-        homeTableView.translatesAutoresizingMaskIntoConstraints = false
-        var cn = NSLayoutConstraint(item: homeTableView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 150.0)
-        view.addConstraint(cn)
-        cn = NSLayoutConstraint(item: homeTableView, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 0.0)
-        view.addConstraint(cn)
-        cn = NSLayoutConstraint(item: homeTableView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1.0, constant: view.frame.width)
-        view.addConstraint(cn)
-        cn = NSLayoutConstraint(item: homeTableView, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1.0, constant: kScreenHeight - 150)
-        view.addConstraint(cn)
+        homeTableView.dataList = ["菠萝", "香蕉", "橘子", "苹果", "柚子", "西红柿", "梨子"]
+        homeTableView.snp_makeConstraints { (make) in
+            make.top.equalTo(150)
+            make.left.equalTo(0)
+            make.width.equalTo(view.frame.width)
+            make.height.equalTo(view.frame.height - 150)
+        }
     }
     
     //MARK: - UIScrollViewDelegate

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SnapKit
 //system
 let kScreenWidth = UIScreen.mainScreen().bounds.width
 let kScreenHeight = UIScreen.mainScreen().bounds.height

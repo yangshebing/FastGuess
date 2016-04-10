@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class HomeCell: UITableViewCell {
     var imgView:UIImageView!
     var titleLabel:UILabel!
@@ -50,6 +49,30 @@ class HomeCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         titleLabel.text = titleStr
+        snapKitAddConstraints()
+//        singleItemAddConstraints()
+    }
+    
+    func snapKitAddConstraints() {
+        imgView.snp_makeConstraints { (make) in
+            make.top.left.equalTo(15)
+            make.width.height.equalTo(50)
+        }
+        titleLabel.snp_makeConstraints { (make) in
+            make.top.equalTo(imgView.snp_top)
+            make.leading.equalTo(imgView.snp_trailing).offset(10)
+            make.width.equalTo(100)
+            make.height.equalTo(15)
+        }
+        button.snp_makeConstraints { (make) in
+            make.top.equalTo(imgView.snp_top)
+            make.leading.equalTo(titleLabel.snp_trailing).offset(120)
+            make.width.equalTo(45)
+            make.height.equalTo(30)
+        }
+    }
+    
+    func singleItemAddConstraints() {
         imgView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -83,6 +106,7 @@ class HomeCell: UITableViewCell {
         cn = NSLayoutConstraint(item: button, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 30)
         contentView.addConstraint(cn)
     }
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
