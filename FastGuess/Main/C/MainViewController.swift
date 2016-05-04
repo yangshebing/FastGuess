@@ -61,7 +61,7 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
 //        self.view.addSubview(pushButton!)
         cycleScrollView.contentSize = CGSizeMake(kScreenWidth * 5, 150)
         let pictures = ["cycle_one.png", "cycle_two.png", "cycle_three.png"]
-        for var i = 0; i < pictures.count + 2; i++ {
+        for i in 0 ..< pictures.count + 2 {
             let imgView = UIImageView();
             imgView.translatesAutoresizingMaskIntoConstraints = false
             if i == 0 {
@@ -85,7 +85,7 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
         pageCtrl.currentPage = 0
         pageCtrl.backgroundColor = UIColor.clearColor()
         pageCtrl.numberOfPages = 3
-        
+        pageCtrl.currentPageIndicatorTintColor = UIColor.redColor()
         
         homeTableView = HomeTableView(frame: CGRectMake(0, 150, view.frame.size.width, view.frame.size.height - 150), style: .Grouped)
         view.addSubview(homeTableView)

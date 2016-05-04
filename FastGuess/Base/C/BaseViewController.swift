@@ -25,7 +25,7 @@ class BaseViewController: UIViewController {
         leftButton.setTitle("返回", forState: .Normal)
         leftButton.setTitleColor(UIColorFromHexColor(0xffffff), forState: .Normal)
         leftButton.titleLabel!.font = UIFont.systemFontOfSize(15)
-        leftButton.addTarget(self, action: "backAction", forControlEvents: .TouchUpInside)
+        leftButton.addTarget(self, action: #selector(BaseViewController.backAction), forControlEvents: .TouchUpInside)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: leftButton)
     }
     
