@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24B66CF73D456B26B46CB2C5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6B69EDDBF61D30E2E0F28D /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		258EAB18BAD3A628FBB95C88 /* Pods_FastGuess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD97EB07E25F8CED44F70AF /* Pods_FastGuess.framework */; };
+		6E09C1B79338C2C3EC501CE9 /* Pods_FastGuessUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A5D3982C8A1F06F47696D6 /* Pods_FastGuessUITests.framework */; };
 		B8822AC11BD3B64E0088A114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8822AC01BD3B64E0088A114 /* AppDelegate.swift */; };
 		B8822AC61BD3B64E0088A114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8822AC41BD3B64E0088A114 /* Main.storyboard */; };
 		B8822AC81BD3B64E0088A114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8822AC71BD3B64E0088A114 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		B8B524EB1BFCBE5100EA824D /* CircleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B524EA1BFCBE5100EA824D /* CircleScrollView.swift */; };
 		B8B524ED1BFCCBC600EA824D /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B524EC1BFCCBC600EA824D /* HomeTableView.swift */; };
 		B8B524EF1BFCD94400EA824D /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B524EE1BFCD94400EA824D /* HomeCell.swift */; };
+		F6C58D36879E10B075567110 /* Pods_FastGuessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B2A1E0C7330B0BBD2864A0 /* Pods_FastGuessTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3CCC9E4B088B690E6C8A0EFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		00B2A1E0C7330B0BBD2864A0 /* Pods_FastGuessTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastGuessTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A5D3982C8A1F06F47696D6 /* Pods_FastGuessUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastGuessUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		641B957B683C7FF66653555F /* Pods-FastGuess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastGuess.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastGuess/Pods-FastGuess.release.xcconfig"; sourceTree = "<group>"; };
 		6A6B69EDDBF61D30E2E0F28D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E331C5578351FCEEE4FEC2C /* Pods-FastGuess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastGuess.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastGuess/Pods-FastGuess.debug.xcconfig"; sourceTree = "<group>"; };
 		B8822ABD1BD3B64E0088A114 /* FastGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8822AC01BD3B64E0088A114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8822AC51BD3B64E0088A114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +71,11 @@
 		B8B524EA1BFCBE5100EA824D /* CircleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleScrollView.swift; sourceTree = "<group>"; };
 		B8B524EC1BFCCBC600EA824D /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		B8B524EE1BFCD94400EA824D /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		EC33D4AAB68AFED3B5BC1EA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C2EBE3CDCA3AEAB47B9476F1 /* Pods-FastGuessTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastGuessTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastGuessTests/Pods-FastGuessTests.release.xcconfig"; sourceTree = "<group>"; };
+		CA66E4762973F3206F05585D /* Pods-FastGuessUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastGuessUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastGuessUITests/Pods-FastGuessUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DBEEA32453C55565DFDD4EC0 /* Pods-FastGuessUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastGuessUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastGuessUITests/Pods-FastGuessUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E3AADA92635F9DD9F4F3D8DB /* Pods-FastGuessTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastGuessTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastGuessTests/Pods-FastGuessTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ECD97EB07E25F8CED44F70AF /* Pods_FastGuess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastGuess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24B66CF73D456B26B46CB2C5 /* Pods.framework in Frameworks */,
+				258EAB18BAD3A628FBB95C88 /* Pods_FastGuess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C58D36879E10B075567110 /* Pods_FastGuessTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E09C1B79338C2C3EC501CE9 /* Pods_FastGuessUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				6A6B69EDDBF61D30E2E0F28D /* Pods.framework */,
+				ECD97EB07E25F8CED44F70AF /* Pods_FastGuess.framework */,
+				00B2A1E0C7330B0BBD2864A0 /* Pods_FastGuessTests.framework */,
+				44A5D3982C8A1F06F47696D6 /* Pods_FastGuessUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,8 +124,8 @@
 				B8822AD41BD3B64E0088A114 /* FastGuessTests */,
 				B8822ADF1BD3B64E0088A114 /* FastGuessUITests */,
 				B8822ABE1BD3B64E0088A114 /* Products */,
-				F0F316D1E92356F1EB56A61D /* Pods */,
 				08DBA791F39EF1864D4F31E1 /* Frameworks */,
+				FC97C45C509D6BF00743DEAC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,11 +250,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F0F316D1E92356F1EB56A61D /* Pods */ = {
+		FC97C45C509D6BF00743DEAC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3CCC9E4B088B690E6C8A0EFC /* Pods.debug.xcconfig */,
-				EC33D4AAB68AFED3B5BC1EA2 /* Pods.release.xcconfig */,
+				9E331C5578351FCEEE4FEC2C /* Pods-FastGuess.debug.xcconfig */,
+				641B957B683C7FF66653555F /* Pods-FastGuess.release.xcconfig */,
+				E3AADA92635F9DD9F4F3D8DB /* Pods-FastGuessTests.debug.xcconfig */,
+				C2EBE3CDCA3AEAB47B9476F1 /* Pods-FastGuessTests.release.xcconfig */,
+				CA66E4762973F3206F05585D /* Pods-FastGuessUITests.debug.xcconfig */,
+				DBEEA32453C55565DFDD4EC0 /* Pods-FastGuessUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -252,12 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8822AE51BD3B64E0088A114 /* Build configuration list for PBXNativeTarget "FastGuess" */;
 			buildPhases = (
-				58E2C2433DA6978F9B0A35A8 /* Check Pods Manifest.lock */,
+				3EDAE1AB43A0CBE4956866D4 /* [CP] Check Pods Manifest.lock */,
 				B8822AB91BD3B64E0088A114 /* Sources */,
 				B8822ABA1BD3B64E0088A114 /* Frameworks */,
 				B8822ABB1BD3B64E0088A114 /* Resources */,
-				0EC4869ACCCDAD76C8515761 /* Embed Pods Frameworks */,
-				4536C73F227C0EA4110AA3F9 /* Copy Pods Resources */,
+				7D594CF05637869D4DA86B06 /* [CP] Embed Pods Frameworks */,
+				928815FEA001B39434F80C6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,9 +290,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8822AE81BD3B64E0088A114 /* Build configuration list for PBXNativeTarget "FastGuessTests" */;
 			buildPhases = (
+				864C1170E66849E8D8F9D527 /* [CP] Check Pods Manifest.lock */,
 				B8822ACD1BD3B64E0088A114 /* Sources */,
 				B8822ACE1BD3B64E0088A114 /* Frameworks */,
 				B8822ACF1BD3B64E0088A114 /* Resources */,
+				B8EA6176C25D74B567123504 /* [CP] Embed Pods Frameworks */,
+				C5B19E5D21360A7D036DE46E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,9 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8822AEB1BD3B64E0088A114 /* Build configuration list for PBXNativeTarget "FastGuessUITests" */;
 			buildPhases = (
+				FDA79746A04A8ED01A439958 /* [CP] Check Pods Manifest.lock */,
 				B8822AD81BD3B64E0088A114 /* Sources */,
 				B8822AD91BD3B64E0088A114 /* Frameworks */,
 				B8822ADA1BD3B64E0088A114 /* Resources */,
+				285A3D5D2C9B778EFAEE4935 /* [CP] Embed Pods Frameworks */,
+				47C142928F9F1A22ED3CCC73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,6 +339,7 @@
 				TargetAttributes = {
 					B8822ABC1BD3B64E0088A114 = {
 						CreatedOnToolsVersion = 7.0.1;
+						ProvisioningStyle = Manual;
 					};
 					B8822AD01BD3B64E0088A114 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -374,49 +399,169 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EC4869ACCCDAD76C8515761 /* Embed Pods Frameworks */ = {
+		285A3D5D2C9B778EFAEE4935 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FastGuessUITests/Pods-FastGuessUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastGuessUITests/Pods-FastGuessUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4536C73F227C0EA4110AA3F9 /* Copy Pods Resources */ = {
+		3EDAE1AB43A0CBE4956866D4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastGuess-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		58E2C2433DA6978F9B0A35A8 /* Check Pods Manifest.lock */ = {
+		47C142928F9F1A22ED3CCC73 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastGuessUITests/Pods-FastGuessUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D594CF05637869D4DA86B06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FastGuess/Pods-FastGuess-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastGuess/Pods-FastGuess-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		864C1170E66849E8D8F9D527 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastGuessTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		928815FEA001B39434F80C6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastGuess/Pods-FastGuess-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8EA6176C25D74B567123504 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FastGuessTests/Pods-FastGuessTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastGuessTests/Pods-FastGuessTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5B19E5D21360A7D036DE46E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastGuessTests/Pods-FastGuessTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDA79746A04A8ED01A439958 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastGuessUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -573,30 +718,39 @@
 		};
 		B8822AE61BD3B64E0088A114 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CCC9E4B088B690E6C8A0EFC /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 9E331C5578351FCEEE4FEC2C /* Pods-FastGuess.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FastGuess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FAL-inc.FastGuess";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		B8822AE71BD3B64E0088A114 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC33D4AAB68AFED3B5BC1EA2 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 641B957B683C7FF66653555F /* Pods-FastGuess.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FastGuess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FAL-inc.FastGuess";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		B8822AE91BD3B64E0088A114 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3AADA92635F9DD9F4F3D8DB /* Pods-FastGuessTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FastGuessTests/Info.plist;
@@ -609,6 +763,7 @@
 		};
 		B8822AEA1BD3B64E0088A114 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2EBE3CDCA3AEAB47B9476F1 /* Pods-FastGuessTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FastGuessTests/Info.plist;
@@ -621,6 +776,7 @@
 		};
 		B8822AEC1BD3B64E0088A114 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA66E4762973F3206F05585D /* Pods-FastGuessUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FastGuessUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -633,6 +789,7 @@
 		};
 		B8822AED1BD3B64E0088A114 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBEEA32453C55565DFDD4EC0 /* Pods-FastGuessUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FastGuessUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

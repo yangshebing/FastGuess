@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
-    var dataList = [AnyObject]()
+    var dataList = [String]()
     let identify = "homeCellId"
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame:frame, style:style)
@@ -24,37 +24,39 @@ class HomeTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
         dataSource = self;
         delegate = self;
         //注册单元格class
-        registerClass(HomeCell.self, forCellReuseIdentifier: identify)
-        separatorStyle = .None;
+        register(HomeCell.self, forCellReuseIdentifier: identify)
+//        registerClass(HomeCell.self, forCellReuseIdentifier: identify)
+        separatorStyle = .none;
         //注册单元格xib
 //        registerNib(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier:identify)
     }
     
     //MARK: - UITableViewDataSource
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1; //default 1
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1;
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataList.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(identify)as! HomeCell
-        cell.selectionStyle = .None;
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: identify)as! HomeCell
+        cell.selectionStyle = .none;
         cell.titleStr = dataList[indexPath.row] as? String
         return cell
     }
     
     //MARK: - UITableViewDelegate
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("the indexpath row is \(indexPath.row)")
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80;
     }
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

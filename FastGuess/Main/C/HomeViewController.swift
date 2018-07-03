@@ -11,6 +11,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("the username is \(UserInfoManager.sharedInstance.userName)")
-        view.backgroundColor = UIColor.blueColor()
+        view.backgroundColor = UIColor.blue
     }
 }

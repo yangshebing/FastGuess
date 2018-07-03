@@ -20,16 +20,19 @@ class BaseViewController: UIViewController {
     }
     
     func initNavSubview() {
-        let leftButton = UIButton.init(type: .Custom);
+        let leftButton = UIButton.init(type: .custom)
         leftButton.frame = CGRectMake(0, 0, 64, 45);
-        leftButton.setTitle("返回", forState: .Normal)
-        leftButton.setTitleColor(UIColorFromHexColor(0xffffff), forState: .Normal)
-        leftButton.titleLabel!.font = UIFont.systemFontOfSize(15)
-        leftButton.addTarget(self, action: "backAction", forControlEvents: .TouchUpInside)
+        leftButton.setTitle("返回", for: .normal)
+        leftButton.setTitleColor(UIColorFromHexColor(0xffffff), for: .normal)
+        leftButton.titleLabel!.font = UIFont.systemFont(ofSize: 15)
+        leftButton.addTarget(self, action: #selector(backAction(_:)), for: .touchUpInside)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: leftButton)
     }
     
-    func backAction () {
-        self.navigationController!.popViewControllerAnimated(true)
+    @objc func backAction (_ sender:UIButton) {
+        if let title = sender.titleLabel?.text {
+            print("dai can shu：\(title)")
+        }
+        self.navigationController!.popViewController(animated: true)
     }
 }

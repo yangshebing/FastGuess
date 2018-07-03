@@ -12,11 +12,11 @@ class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.barTintColor = bMainColor()
-        self.navigationBar.translucent = false
+        self.navigationBar.isTranslucent = false
 //        UIApplication.sharedApplication().statusBarStyle = .LightContent;
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent;
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
