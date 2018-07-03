@@ -78,7 +78,7 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
         pageCtrl.currentPage = 0
         pageCtrl.backgroundColor = UIColor.clear
         pageCtrl.numberOfPages = 3
-        
+        pageCtrl.currentPageIndicatorTintColor = UIColor.red
         
         homeTableView = HomeTableView(frame: CGRectMake(0, 150, view.frame.size.width, view.frame.size.height - 150), style: .grouped)
         view.addSubview(homeTableView)
