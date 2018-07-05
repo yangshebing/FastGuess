@@ -15,6 +15,7 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
     var result:Data?
     let pageCount = 0
     var homeTableView:HomeTableView!
+    var leftBtn:UIButton?
     
     @IBOutlet weak var cycleScrollView: UIScrollView!
     
@@ -89,6 +90,13 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
             make.width.equalTo(view.frame.width)
             make.height.equalTo(view.frame.height - 150)
         }
+        
+        leftBtn = UIButton(type: .custom)
+        leftBtn?.frame = CGRectMake(0, 0, 60, 44)
+        leftBtn?.setTitle("保存", for: .normal)
+        leftBtn?.setTitleColor(UIColor.gray, for: .normal)
+        leftBtn?.addTarget(self, action:#selector(didTapSave(_:)) , for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: leftBtn!)
     }
     
     //MARK: - UIScrollViewDelegate
@@ -148,7 +156,12 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
         }
     }
     
-    
+   @objc func didTapSave(_ sender:UIButton) {
+        print("test save")
+        if let btnTitle = sender.titleLabel?.text {
+            print("the button title is: \(btnTitle)")
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
